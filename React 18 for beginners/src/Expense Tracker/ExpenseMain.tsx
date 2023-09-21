@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import ExpenseFilter from "./ExpenseFilter";
+import ExpenseForm from "./ExpenseForm";
 import ExpenseList from "./ExpenseList";
 
 interface Expense {
-  id: number;
+  id?: number;
   description: string;
   amount: number;
   category: string;
@@ -33,8 +34,15 @@ const ExpenseMain = () => {
     console.log(category + "selected");
   };
 
+  const onSubmit = (expense: Expense) => {
+    console.log(expense);
+    setExpenses([...expenses, { ...expense, id: expenses.length + 1 }]);
+  };
+
   return (
     <>
+      <h2 className="mb-2">Expense Form</h2>
+      <ExpenseForm onSubmit={onSubmit} />
       <ExpenseFilter onSelectCategory={onSelectCategory} />
       <ExpenseList expenses={visibleExpenses} onDelete={onDelete} />
     </>

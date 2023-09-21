@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Expense {
-  id: number;
+  id?: number;
   description: string;
   amount: number;
   category: string;
@@ -34,7 +34,7 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
             <td>
               <button
                 className="btn btn-outline-danger"
-                onClick={() => onDelete(expense.id)}
+                onClick={() => onDelete(expense.id!)}
               >
                 Delete
               </button>
