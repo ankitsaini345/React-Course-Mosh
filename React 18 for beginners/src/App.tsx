@@ -1,6 +1,7 @@
 import Alert from "./components/Alert";
 import Button from "./components/Button/Button";
 import ExpendableText from "./components/ExpendableText";
+import ComplexForm from "./components/Form/complexForm";
 import Form from "./components/Form/Form";
 import Like from "./components/Like";
 import ListGroup from "./components/ListGroup/ListGroup";
@@ -8,7 +9,9 @@ import Message from "./components/Message";
 import MutateArray from "./Examples/MutateArray";
 
 function App() {
-  return <Form />;
+  return <ComplexForm />;
+
+  // return <Form />;
 
   // ----------------------for list group component
   // const items: string[] | null = ["A", "B", "C", "D"];
