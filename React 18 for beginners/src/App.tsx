@@ -10,10 +10,10 @@ import UserList from "./components/UserList/UserList";
 import MutateArray from "./Examples/MutateArray";
 import ExpenseMain from "./Expense Tracker/ExpenseMain";
 import Test from "./Video Game App/Test";
+import VideoGameMain from "./Video Game App/VideoGameMain";
 
 function App() {
-  return <Test />;
-
+  return <VideoGameMain />;
   // return <UserList />;
   // return <ExpenseMain />;
   // return <ComplexForm />;
