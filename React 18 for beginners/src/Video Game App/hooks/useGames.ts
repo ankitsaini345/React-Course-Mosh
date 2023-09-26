@@ -1,9 +1,5 @@
-import { CanceledError } from "axios";
-import { useEffect, useState } from "react";
-import apiClient from "../services/api-client";
 import { GameQuery } from "../VideoGameApp";
 import useData from "./useData";
-import { Genre } from "./useGenres";
 import { Platform } from "./usePlatform";
 
 export interface Game {
@@ -22,6 +18,7 @@ const useGames = (gameQuery: GameQuery) => {
         genres: gameQuery.genre?.id,
         platform: gameQuery.platform?.id,
         ordering: gameQuery.sort,
+        search: gameQuery.search,
       },
     },
     [gameQuery]
