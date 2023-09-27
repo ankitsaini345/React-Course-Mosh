@@ -5,6 +5,7 @@ import CommentList from "./react-query/CommentList";
 import MasterDetail from "./react-query/MasterDetail";
 import PostList from "./react-query/PostList";
 import TodoList from "./react-query/TodoList";
+import TodoMain from "./react-query/TodoMain";
 
 const StarterProjectMain = () => {
   const queryClient = new QueryClient();
@@ -12,7 +13,7 @@ const StarterProjectMain = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools />
-      <MasterDetail />
+      <TodoMain />
     </QueryClientProvider>
   );
 };
