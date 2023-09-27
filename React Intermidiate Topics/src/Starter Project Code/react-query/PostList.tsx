@@ -2,7 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import usePosts, { Post } from "./hooks/usePosts";
 
-const PostList = () => {
+interface Props {
+  onSelectPost: (id: number) => void;
+}
+
+const PostList = ({ onSelectPost }: Props) => {
   const pageSize = 10;
   const { data, error, isLoading, fetchNextPage, isFetchingNextPage } =
     usePosts({ pageSize });
@@ -14,7 +18,11 @@ const PostList = () => {
       <ul className="list-group">
         {data?.pages.map((page, index) =>
           page.map((post) => (
-            <li key={post.id} className="list-group-item">
+            <li
+              onClick={() => onSelectPost(post.id)}
+              key={post.id}
+              className="list-group-item"
+            >
               {post.title}
             </li>
           ))
