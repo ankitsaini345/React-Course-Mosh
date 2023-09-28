@@ -6,6 +6,7 @@ import MasterDetail from "./react-query/MasterDetail";
 import PostList from "./react-query/PostList";
 import TodoList from "./react-query/TodoList";
 import TodoMain from "./react-query/TodoMain";
+import Counter from "./state-management/Counter";
 
 const StarterProjectMain = () => {
   const queryClient = new QueryClient();
@@ -13,7 +14,7 @@ const StarterProjectMain = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools />
-      <TodoMain />
+      <Counter />
     </QueryClientProvider>
   );
 };
