@@ -1,14 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "bootstrap/dist/css/bootstrap.css";
-import CommentList from "./react-query/CommentList";
-import MasterDetail from "./react-query/MasterDetail";
-import PostList from "./react-query/PostList";
-import TodoList from "./react-query/TodoList";
-import TodoMain from "./react-query/TodoMain";
-import Counter from "./state-management/Counter";
-import LoginStatus from "./state-management/LoginStatus";
-import TaskList from "./state-management/TaskList";
+import StarterProjectApp from "./StarterProjectApp";
 
 const StarterProjectMain = () => {
   const queryClient = new QueryClient();
@@ -16,7 +9,7 @@ const StarterProjectMain = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools />
-      <LoginStatus />
+      <StarterProjectApp />
     </QueryClientProvider>
   );
 };
