@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import AuthProvider from "./state-management/AuthProvider";
 import AuthContext from "./state-management/context/authContext";
 import TaskContext from "./state-management/context/tasksContext";
 import HomePage from "./state-management/HomePage";
@@ -8,15 +9,14 @@ import taskReducer from "./state-management/reducers/taskReducer";
 
 const StarterProjectApp = () => {
   const [tasks, dispatch] = useReducer(taskReducer, []);
-  const [user, authDispatch] = useReducer(authReducer, '');
 
   return (
-    <AuthContext.Provider value={{user, dispatch: authDispatch}}>
-    <TaskContext.Provider value={{ tasks, dispatch }}>
-      <NavBar />
-      <HomePage />
-    </TaskContext.Provider>
-    </AuthContext.Provider>
+    <AuthProvider>
+      <TaskContext.Provider value={{ tasks, dispatch }}>
+        <NavBar />
+        <HomePage />
+      </TaskContext.Provider>
+    </AuthProvider>
   );
 };
 
