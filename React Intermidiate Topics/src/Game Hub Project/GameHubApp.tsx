@@ -4,6 +4,7 @@ import GameHeading from "./components/GameHeading";
 import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
+import ResetFilter from "./components/ResetFilter";
 import SortSelector from "./components/SortSelector";
 
 function GameHubApp() {
@@ -33,7 +34,10 @@ function GameHubApp() {
             <Box marginRight={5}>
               <PlatformSelector />
             </Box>
-            <SortSelector />
+            <Box marginRight={5}>
+              <SortSelector />
+            </Box>
+            <ResetFilter />
           </Flex>
         </Box>
         <GameGrid />
