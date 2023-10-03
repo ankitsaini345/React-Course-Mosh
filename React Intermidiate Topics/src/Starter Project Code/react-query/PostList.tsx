@@ -1,6 +1,4 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import usePosts, { Post } from "./hooks/usePosts";
+import usePosts from "./hooks/usePosts";
 
 interface Props {
   onSelectPost: (id: number) => void;

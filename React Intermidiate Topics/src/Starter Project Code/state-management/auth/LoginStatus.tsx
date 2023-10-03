@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import AuthContext from "../context/authContext";
 import useAuthStore from "./useAuthStore";
 
 const LoginStatus = () => {
