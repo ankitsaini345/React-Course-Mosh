@@ -1,10 +1,10 @@
 import "./App.css";
-import GameHubAppMain from "./Game Hub Project/GameHubAppMain";
+import StarterProjectMain from "./Starter Project Code/StarterProjectMain";
 
 function App() {
   // return <StarterProject />;
-  return <GameHubAppMain />;
-  // return <StarterProjectMain />;
+  // return <GameHubAppMain />;
+  return <StarterProjectMain />;
 }
 
 export default App;

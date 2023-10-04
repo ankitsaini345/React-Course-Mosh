@@ -1,7 +1,8 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "bootstrap/dist/css/bootstrap.css";
-import StarterProjectApp from "./StarterProjectApp";
+import { RouterProvider } from "react-router-dom";
+import router from "./routing/routes";
 
 const StarterProjectMain = () => {
   const queryClient = new QueryClient();
@@ -9,7 +10,7 @@ const StarterProjectMain = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools />
-      <StarterProjectApp />
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 };
