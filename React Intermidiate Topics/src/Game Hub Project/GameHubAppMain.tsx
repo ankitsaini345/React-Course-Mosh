@@ -1,7 +1,8 @@
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import GameHubApp from "./GameHubApp";
+import { RouterProvider } from "react-router-dom";
 import "./index.css";
+import router from "./routes";
 import theme from "./theme";
 
 const GameHubAppMain = () => {
@@ -10,7 +11,7 @@ const GameHubAppMain = () => {
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <QueryClientProvider client={queryClient}>
-        <GameHubApp />
+        <RouterProvider router={router} />
       </QueryClientProvider>
     </ChakraProvider>
   );
